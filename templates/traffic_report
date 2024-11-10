@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Traffic Analysis</title>
+</head>
+<body>
+    <h1>Website Traffic Analysis</h1>
+    {% if plot_url %}
+        {% if 'data:image/png;base64' in plot_url %}
+            <img src="{{ plot_url }}" alt="Traffic Pattern">
+        {% else %}
+            <p>{{ plot_url }}</p>  
+        {% endif %}
+    {% endif %}
+</body>
+</html>
